@@ -1,1 +1,1 @@
-# discord.gg/prime-scripts
+# https://discord.gg/prime-scripts
