@@ -5,7 +5,7 @@ cl_config.screenshot = {
 }
 
 cl_config.language = {
-    ["en"] = {
+    ["de"] = {
         ["create_screenshot"] = "Du hast erfolgreich ein Foto geteilt!",
         ["cooldown"] = "Du hast aktuell noch einen Cooldown",
         ["console_command"] = "Du kannst aus der Console kein Screenshot erstellen."
