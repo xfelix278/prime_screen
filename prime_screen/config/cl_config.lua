@@ -1,7 +1,7 @@
 cl_config = {}
 
 cl_config.screenshot = {
-    language = "en" -- or "en"
+    language = "en" -- "en" or "de"
 }
 
 cl_config.language = {
