@@ -15,32 +15,34 @@ end)
 
 RegisterNetEvent("prime_screen:sendEmbed")
 AddEventHandler("prime_screen:sendEmbed", function(url)
-    PerformHttpRequest(sv_config.screenshot.webhook.webhooks.offical, function(err, text, headers)
-    end, "POST", json.encode({
-      username = "Prime-Screen",
-      embeds = {
-        {
-            author = {
-                name = sv_config.screenshot.webhook.embed.author.name,
-                url = sv_config.screenshot.webhook.embed.author.url,
-                icon_url = sv_config.screenshot.webhook.embed.author.icon_url
-            },
-            color = sv_config.screenshot.webhook.embed.color,
-            image = {
-                url = url
-            },
-            title = sv_config.screenshot.webhook.embed.title,
-            description = string.format(sv_config.screenshot.webhook.embed.description, GetPlayerName(source), sv_config.screenshot.general.command_name),
-            footer = {
-                text = os.date("%Y/%m/%d %X").. " - Made By Prime-Scripts",
-                icon_url = sv_config.screenshot.webhook.embed.footer.icon_url
+    if not GetInvokingResource() then
+        PerformHttpRequest(sv_config.screenshot.webhook.webhooks.offical, function(err, text, headers)
+        end, "POST", json.encode({
+        username = "Prime-Screen",
+        embeds = {
+            {
+                author = {
+                    name = sv_config.screenshot.webhook.embed.author.name,
+                    url = sv_config.screenshot.webhook.embed.author.url,
+                    icon_url = sv_config.screenshot.webhook.embed.author.icon_url
+                },
+                color = sv_config.screenshot.webhook.embed.color,
+                image = {
+                    url = url
+                },
+                title = sv_config.screenshot.webhook.embed.title,
+                description = string.format(sv_config.screenshot.webhook.embed.description, GetPlayerName(source), sv_config.screenshot.general.command_name),
+                footer = {
+                    text = os.date("%Y/%m/%d %X").. " - Made By Prime-Scripts",
+                    icon_url = sv_config.screenshot.webhook.embed.footer.icon_url
+                }
             }
         }
-      }
-    }), {
-      ["Content-Type"] = "application/json"
-    })
-    Notification(source, "Screenshot", language["create_screenshot"], "success", 5000)
+        }), {
+        ["Content-Type"] = "application/json"
+        })
+        Notification(source, "Screenshot", language["create_screenshot"], "success", 5000)
+    end
 end)
 
 function CheckCooldown()
