@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Prime-Scripts'
 description 'discord.gg/prime-scripts'
-version '1.0.0'
+version '1.1.0'
 
 server_scripts {
     'config/config.lua',
