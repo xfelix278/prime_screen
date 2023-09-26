@@ -14,8 +14,8 @@ config.screenshot = {
     },
     webhook = {
         webhooks = {
-            offical = "https://discord.com/api/webhooks/1145007873575882792/DWtP0XwAS4opo0wwamfDy89k92auCRGR7_heY1CM0SBu7J7cLNSHkRmwe3v10yWkPDNJ", -- offical webhook
-            storage = "https://discord.com/api/webhooks/1145007873575882792/DWtP0XwAS4opo0wwamfDy89k92auCRGR7_heY1CM0SBu7J7cLNSHkRmwe3v10yWkPDNJ" -- webhook to safe the img / must be set
+            offical = "YOUR-WEBHOOK", -- offical webhook
+            storage = "YOUR-WEBHOOK" -- webhook to safe the img / must be set
         },
         embed = {
             color = 3447003, -- https://gist.github.com/thomasbnt/b6f455e2c7d743b796917fa3c205f812
