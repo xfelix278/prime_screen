@@ -5,12 +5,8 @@ author 'Prime-Scripts'
 description 'discord.gg/prime-scripts'
 version '1.0.0'
 
-shared_scripts {
-    'config/cl_config.lua'
-}
-
 server_scripts {
-    'config/sv_config.lua',
+    'config/config.lua',
     'server/server.lua'
 }
 
@@ -19,5 +15,5 @@ client_scripts {
 }
 
 dependencies {
-    'screenshot-basic'
+    'screenshot-basic',
 }
